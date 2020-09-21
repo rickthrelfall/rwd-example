@@ -34,9 +34,14 @@ Go Live
 To Do:
 
 Fixes for mobile browsers & scrolling
+
 Left menu is just used for testing; fix this as it's currently unusable when collapsed
+
 Animated transitions when open/close menu etc.
+
 Clean up typescript
+
 Complete the themes
+
 Complete the typography retrieval & typeography style updates based on viewport/device
 
