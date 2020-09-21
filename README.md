@@ -2,7 +2,9 @@
 Example project to illustrate some aspects of responsive behaviour and theme switching using CSS variables.
 
 Requires TSC v3.9 or later
+
 Requires Live Sass Compiler
+
 Go to Settings->Extensions->Live Sass Compiler->Formats and set savePath to "./css
 {
     "liveSassCompile.settings.formats": [
@@ -16,6 +18,10 @@ Go to Settings->Extensions->Live Sass Compiler->Formats and set savePath to "./c
     ]
     "
 }
+
+---
+
+To test:
 
 'Watch Sass'
 Run tsc --watch from the terminal
