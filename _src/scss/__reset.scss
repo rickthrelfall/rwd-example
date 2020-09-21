@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;        
+}
+
+input,
+textarea {
+    -moz-user-select: text;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,88 @@
+@mixin layout-main {
+
+    .main-container {
+        display: grid;
+        grid-template-rows: $header-height 1fr $footer-height;
+        grid-template-areas:
+            "header"
+            "workarea-container"
+            "footer";
+
+        width: 100vw;
+        height: 100vh;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header {
+        grid-area: header;
+        background: app-color(header-background);
+        color: app-color(header-text);
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        padding-left:app-grid(grid-std);
+        padding-right: app-grid(grid-std);       
+    }
+
+    .workarea-container {
+        grid-area: workarea-container;
+        display: grid;
+        grid-template-columns: $nav-width__collapsed auto;
+        grid-template-areas:
+            "navigation content-container";
+
+        overflow: hidden;
+        background: app-color(workarea-background);
+        color: app-color(workarea-text);
+        margin: 0px;
+        padding: 0px;        
+    }
+    @include lg {
+        .workarea-container {
+            grid-template-columns: $nav-width__expanded auto;
+        }
+    }
+
+    nav {
+        grid-area: navigation;
+        background: app-color(nav-background);
+        color: app-color(nav-text);
+    }
+
+    section {
+        grid-area: content-container;
+        overflow: hidden;
+        box-sizing: border-box;
+
+        padding: 0;
+        // all padding moved to the article-container to allow shadows to work
+        // padding-left: app-grid(grid-xs);
+        // padding-top: 0;
+        // padding-right: app-grid(grid-xs);
+        // padding-bottom: 0;
+
+        // text-align: center;
+    }
+    @include lg {
+        section {
+            // padding-left: app-grid(grid-std);
+            // padding-right: app-grid(grid-std);
+        }
+    }
+
+    footer {
+        grid-area: footer;
+        background: app-color(footer-background);
+        color: app-color(footer-text);        
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        padding-left: app-grid(grid-std);
+        padding-right: app-grid(grid-std);       
+    }
+}

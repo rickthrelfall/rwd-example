@@ -1,0 +1,57 @@
+// default theme; for testing only
+.theme-default {
+    --theme-header-background: #0097a7;
+}
+
+// mobile theme : dark
+.m-theme-dark {
+    --theme-header-background: #003767;
+}
+
+// mobile theme : light
+.m-theme-light {
+    --theme-header-background: #b0cde6;
+}
+
+// Colour list 
+$app-palette: (
+    app-background: rgba(33,33,33,.15),
+
+    header-background: var(--theme-header-background),
+
+    header-text: #fff,
+    nav-background: #00363c,
+    nav-text: #fff,
+    workarea-background: #f7f7f7,
+    workarea-text: #000,
+    footer-background: #002327,
+    footer-text: #fff,
+    
+    panel-background: #fff,
+    mainmenu-background: #00363c,
+    mainmenu-toggle-closed: #0097a7,
+    mainmenu-toggle-open: #ff0,
+    mainmenu-item: rgba(255,255,255,.8),
+    mainmenu-item__hover: rgba(255,255,0,.8),
+    filter-button: #0097a7,
+    filter-button-text: #0097a7,
+    filter-button-text-selected: #fff,
+    content-text: #555,
+);
+
+@function app-color($colorkey) {
+    @return map-get($app-palette, $colorkey);
+}
+
+// Shadows - specific
+@function panel-shadow() {
+    // @return 0 1px 4px 0 rgba(0,0,0,.25);
+    @return 4px 4px 12px 0 rgba(0,0,0,.25),
+            -4px -4px 12px 0 rgba(255, 255, 255, 0.3);
+    //8px 8px 12px 0 rgba(0, 0, 0, 0.25),
+      //      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+@function mainmenu-shadow() {
+    @return 1px 2px 4px 2px rgba(0,0,0,.25);
+}

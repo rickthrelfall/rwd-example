@@ -1,0 +1,21 @@
+// Adjust typography according to target layout (based on breakpoints)
+
+@mixin app_typography {
+
+    // Default typography (<sm)
+        // etc.
+
+    @include sm {
+        // e.g. capitalised navigation buttons for phone size
+    }
+
+    @include md {
+    }
+
+    @include lg {
+    }
+
+    @include xl {
+    }
+
+}

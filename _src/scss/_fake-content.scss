@@ -1,0 +1,49 @@
+$fake-content-background: #f7f7f7;
+$fake-item-background: #c7c7c7;
+
+@mixin fake-item($height) {
+    .fake-item {
+        background-color: $fake-item-background;
+        flex: 1;
+        min-width: 200px;
+        height: $height;
+        margin: app-grid(grid-sm);
+    }
+}
+
+@mixin fake-content__postfix($postfix, $item_height) {
+    .fake-content__#{$postfix} {
+        background: $fake-content-background;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include fake-item($item_height);
+    }
+}
+
+@mixin fake-content {
+
+    @include fake-content__postfix("A", 100px);
+    @include fake-content__postfix("B", 200px);
+    @include fake-content__postfix("C", 150px);
+    @include fake-content__postfix("D", 50px);
+    @include fake-content__postfix("E", 130px);
+
+//
+//    .fake-content__A {
+//        background: $fake-content-background;
+
+//        display: flex;
+//        flex-wrap: wrap;
+        /*
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-gap: app-grid(grid-std);
+        grid-auto-flow: column;
+        grid-auto-rows: auto;
+        */
+
+//        @include fake-item(100px);
+//    }
+
+}

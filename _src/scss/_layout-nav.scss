@@ -1,0 +1,59 @@
+@mixin layout-nav {
+
+    nav hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid app-color(header-background);
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    nav ul {
+        margin: 0;
+    
+        li {
+            padding: app-grid(grid-std) app-grid(grid-std);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            a {
+                color: app-color(mainmenu-item);
+                padding-left: app-grid(grid-std);
+                
+                text-transform: uppercase;
+                text-decoration: none;
+                white-space: nowrap;
+                display: none;
+//                text-overflow: ellipsis;
+            }
+            @include lg {
+                a {
+                   display: inline-block;
+                }
+            }
+        }
+
+        li::before {
+            content: " ";
+            height: 20px;
+            width: 20px;
+            background-color: rgba(255,255,255,0);
+            border: 12px solid #000b0c;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        li:hover {
+            background-color: #002327;
+        }
+
+        li:hover:before {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        li a:hover {
+        }
+    }
+}

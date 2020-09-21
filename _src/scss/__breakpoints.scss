@@ -1,0 +1,15 @@
+// Used by __rwd 
+// Always use @media queries defined in rwd rather than directly referencing these values
+
+// target: Phone and small tablet - landscape
+$screen-sm-min: 36em;
+
+// target: Small  tablet - portrait
+$screen-md-min: 48em;
+
+// target: Tablet and small laptop
+$screen-lg-min: 62em;
+
+// target: desktop and large tablets
+$screen-xl-min: 80em;
+

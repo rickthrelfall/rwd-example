@@ -1,0 +1,20 @@
+// Panels
+$panel-corner-radius-standard: app-grid-radius(grid-sm);
+
+// Header
+$header-height: app-grid-multi(3);
+
+// Footer
+$footer-height: app-grid-multi(2);
+
+// Navigation panel
+$nav-width__collapsed: app-grid-multi(5);
+$nav-width__expanded: app-grid-multi(16);
+
+// Article container
+$article-container-max-width: 1260px; //1260px;
+$article-container-filter-view-max-width: 760px;
+
+// Transition speeds
+$transition-fast: 0.3s;
+$transition-slow: 0.8s;

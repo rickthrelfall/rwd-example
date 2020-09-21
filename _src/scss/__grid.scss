@@ -1,0 +1,26 @@
+// Define the base grid
+$grid-spacing-base: 16;
+$grid-spacing-units: px;
+
+$app-grid-spacing: (
+    grid-std: $grid-spacing-base,
+    grid-lg: ($grid-spacing-base*2),
+    grid-sm: ($grid-spacing-base/2),
+    grid-xs: ($grid-spacing-base/4),
+);
+
+// Retrieve the specified spacing
+@function app-grid($gridkey) {
+    @return ( map-get($app-grid-spacing, $gridkey) + $grid-spacing-units );
+}
+
+// Retrieve corder radius
+@function app-grid-radius($gridkey) {
+    @return ( (map-get($app-grid-spacing, $gridkey) / 2) + $grid-spacing-units );
+}
+
+// Retrieve special multiplier
+@function app-grid-multi($multiplier) {
+    @return ( (map-get($app-grid-spacing, grid-std) * $multiplier) + $grid-spacing-units );
+}
+
